@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZERONE'26 Symposium</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background: linear-gradient(135deg,#2b0a3d,#5f0f85);
+color:white;
+text-align:center;
+}
+
+header{
+padding:30px;
+background: rgba(0,0,0,0.4);
+}
+
+.logo{
+width:120px;
+}
+
+h1{
+font-size:42px;
+margin:10px;
+}
+
+.subtitle{
+font-size:20px;
+color:#00e5ff;
+}
+
+.section{
+padding:30px;
+}
+
+.card{
+background: rgba(255,255,255,0.1);
+padding:20px;
+margin:20px auto;
+width:80%;
+border-radius:10px;
+}
+
+button{
+padding:15px 35px;
+font-size:20px;
+background:#00e5ff;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+button:hover{
+background:white;
+}
+
+.countdown{
+font-size:28px;
+margin-top:15px;
+color:#00e5ff;
+}
+
+.contact{
+font-size:18px;
+line-height:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Dhanalakshmi Srinivasan University</h2>
+
+<h1>ZERONE'26</h1>
+
+<div class="subtitle">
+National Level Technical Symposium
+</div>
+
+<div class="countdown" id="countdown"></div>
+
+<br>
+
+<a href="https://forms.gle/TXP5Rnz2whpD4Wkf6" target="_blank">
+<button>REGISTER NOW</button>
+</a>
+
+</header>
+
+
+<div class="section">
+
+<div class="card">
+
+<h2>Technical Events</h2>
+
+<p>Paper Jam</p>
+
+<p>Promptopia</p>
+
+<p>Bug Smash</p>
+
+</div>
+
+<div class="card">
+
+<h2>Non Technical Events</h2>
+
+<p>Multimedia Creation</p>
+
+<p>Act and Crack</p>
+
+</div>
+
+<div class="card">
+
+<h2>Event Details</h2>
+
+<p>Date: February 27, 2026</p>
+
+<p>Venue: DSU-SET C Block</p>
+
+<p>Registration Fee: ₹250</p>
+
+</div>
+
+
+<div class="card contact">
+
+<h2>Convenor</h2>
+
+<p>Dr. R. Gopi</p>
+
+<h2>Faculty Coordinators</h2>
+
+<p>Mrs. A. Narkis Banu – 6385607012</p>
+
+<p>Mr. R. Vignesh Kumar – 8608365200</p>
+
+<h2>Student Coordinators</h2>
+
+<p>Ms. R. Preethiga</p>
+
+<p>Mr. A. Ayyappan</p>
+
+<p>Email: zeronedsu2025@gmail.com</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+var eventDate = new Date("Feb 27, 2026 09:00:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = eventDate - now;
+
+var days = Math.floor(distance/(1000*60*60*24));
+
+var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("countdown").innerHTML =
+days+" Days "+hours+" Hours "+minutes+" Minutes Remaining";
+
+},1000);
+
+</script>
+
+</body>
+</html>
